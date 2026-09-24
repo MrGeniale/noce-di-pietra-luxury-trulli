@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useLanguage } from '../context/LanguageContext';
 import { Menu, X, MessageCircle, MapPin } from 'lucide-react';
-import { InstagramIcon, FacebookIcon } from './Icons';
+import { InstagramIcon, FacebookIcon, TikTokIcon } from './Icons';
 import { externalLinks } from '../data/content';
 
 interface HeaderProps {
@@ -208,7 +208,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenBooking }) => {
                   </div>
                 </div>
 
-                <div className="flex justify-center items-center gap-6 pt-2 text-[#dfc299]">
+                <div className="flex justify-center items-center gap-4 sm:gap-5 pt-2 text-[#dfc299]">
                   <a
                     href={externalLinks.instagram}
                     target="_blank"
@@ -226,6 +226,15 @@ export const Header: React.FC<HeaderProps> = ({ onOpenBooking }) => {
                     aria-label="Facebook"
                   >
                     <FacebookIcon className="w-5 h-5" />
+                  </a>
+                  <a
+                    href={externalLinks.tiktok}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-[#dfc299] hover:text-[#161412] transition-colors"
+                    aria-label="TikTok"
+                  >
+                    <TikTokIcon className="w-5 h-5" />
                   </a>
                   <a
                     href={externalLinks.googleMaps}

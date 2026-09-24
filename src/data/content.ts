@@ -198,9 +198,9 @@ export const content: { it: ContentData; en: ContentData } = {
           id: 'kitchen',
           title: 'Cucina Attrezzata di Design',
           tag: 'Cucina & Breakfast Corner',
-          desc: 'Completa di piano cottura a induzione, frigorifero, forno a microonde, macchina del caffè espresso, bollitore e set completo di stoviglie per gustare i sapori della Puglia in piena libertà.',
+          desc: 'Completa di piano cottura a induzione, frigorifero, forno, lavastoviglie, lavatrice, macchina del caffè espresso, bollitore, tostapane e moka per il massimo del comfort.',
           image: '/images/img_8207.jpg',
-          features: ['Piano cottura completo', 'Macchina espresso con cialde', 'Frigorifero & Freezer', 'Set stoviglie e calici'],
+          features: ['Piano cottura & Forno', 'Lavastoviglie & Lavatrice', 'Macchina espresso con cialde & Moka', 'Frigo & Set stoviglie completo'],
         },
         {
           id: 'garden',
@@ -249,7 +249,7 @@ export const content: { it: ContentData; en: ContentData } = {
         {
           icon: 'Flame',
           title: 'Cucina Completa & Attrezzata',
-          desc: 'Piano cottura ad induzione, frigo, forno, lavastoviglie, bollitore d\'acqua calda, tostapane, moka e macchina del caffè espresso.',
+          desc: 'Piano cottura ad induzione, frigo, forno, lavastoviglie, lavatrice, bollitore d\'acqua calda, tostapane, moka e macchina del caffè espresso.',
         },
         {
           icon: 'Wind',
@@ -418,9 +418,9 @@ export const content: { it: ContentData; en: ContentData } = {
           id: 'kitchen',
           title: 'Designer Fully Equipped Kitchen',
           tag: 'Kitchen & Breakfast Corner',
-          desc: 'Equipped with induction cooktop, refrigerator, microwave oven, espresso coffee machine, kettle, and complete dinnerware to enjoy regional gourmet delights at your own pace.',
+          desc: 'Equipped with induction cooktop, refrigerator, oven, dishwasher, washing machine, espresso coffee machine, kettle, toaster and moka for supreme comfort.',
           image: '/images/img_8207.jpg',
-          features: ['Full induction stovetop', 'Espresso machine with pods', 'Refrigerator & Freezer', 'Full tableware & wine glasses'],
+          features: ['Induction stovetop & Oven', 'Dishwasher & Washing machine', 'Espresso machine & Moka', 'Fridge & Full dinnerware'],
         },
         {
           id: 'garden',
@@ -469,7 +469,7 @@ export const content: { it: ContentData; en: ContentData } = {
         {
           icon: 'Flame',
           title: 'Fully Equipped Kitchen',
-          desc: 'Induction cooktop, fridge, oven, dishwasher, hot water kettle, toaster, moka and espresso machine.',
+          desc: 'Induction cooktop, fridge, oven, dishwasher, washing machine, hot water kettle, toaster, moka and espresso machine.',
         },
         {
           icon: 'Wind',
@@ -665,6 +665,7 @@ export const externalLinks = {
   booking: 'https://www.booking.com/hotel/it/noce-di-pietra-luxury-trulli.it.html',
   instagram: 'https://www.instagram.com/noce_di_pietra_luxury_trulli/',
   facebook: 'https://www.facebook.com/p/Noce-di-Pietra-Luxury-Trulli-61592681723740/',
+  tiktok: 'https://www.tiktok.com/@noce.di.pietra.lu',
   googleMaps: 'https://www.google.com/maps/place//data=!4m2!3m1!1s0x1347ad0016f6b4b9:0x916d8fdea68c0145?sa=X&ved=1t:8290&ictx=111',
   googleMapsEmbed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d48386.17724838274!2d17.275845!3d40.765622!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1347ad0016f6b4b9%3A0x916d8fdea68c0145!2sNoce%20di%20Pietra%20-%20Luxury%20Trulli!5e0!3m2!1sit!2sit!4v1710700000000!5m2!1sit!2sit',
   whatsappNumber: '393347550635', // default WhatsApp booking

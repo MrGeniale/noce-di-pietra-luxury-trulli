@@ -164,9 +164,14 @@ export const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose }) =
           </form>
 
           {/* Guarantee footer */}
-          <div className="mt-4 pt-4 border-t border-white/10 flex items-center justify-center gap-2 text-[11px] text-[#dfc299]">
-            <CheckCircle2 className="w-3.5 h-3.5" />
-            <span>{language === 'it' ? 'Nessun pagamento anticipato richiesto ora' : 'No advance payment required right now'}</span>
+          <div className="mt-4 pt-4 border-t border-white/10 text-center space-y-1">
+            <div className="flex items-center justify-center gap-2 text-[11px] text-[#dfc299]">
+              <CheckCircle2 className="w-3.5 h-3.5" />
+              <span>{language === 'it' ? 'Nessun pagamento anticipato richiesto ora' : 'No advance payment required right now'}</span>
+            </div>
+            <p className="text-[10px] text-white/50">
+              {language === 'it' ? 'Struttura riservata e non fumatori all’interno • Animali domestici non ammessi' : 'Private non-smoking indoor estate • Pets not allowed'}
+            </p>
           </div>
         </motion.div>
       </div>

@@ -1,7 +1,7 @@
 import React from 'react';
 import { useLanguage } from '../context/LanguageContext';
 import { MapPin, MessageCircle, ExternalLink } from 'lucide-react';
-import { InstagramIcon, FacebookIcon, BookingIcon } from './Icons';
+import { InstagramIcon, FacebookIcon, BookingIcon, TikTokIcon } from './Icons';
 import { externalLinks } from '../data/content';
 
 interface FooterProps {
@@ -57,6 +57,15 @@ export const Footer: React.FC<FooterProps> = ({ onOpenBooking }) => {
                 aria-label="Facebook"
               >
                 <FacebookIcon className="w-5 h-5" />
+              </a>
+              <a
+                href={externalLinks.tiktok}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-[#dfc299] hover:bg-[#dfc299] hover:text-[#12100e] transition-all duration-300"
+                aria-label="TikTok"
+              >
+                <TikTokIcon className="w-5 h-5" />
               </a>
               <a
                 href={externalLinks.googleMaps}
@@ -176,7 +185,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenBooking }) => {
             © {new Date().getFullYear()} Noce di Pietra – Luxury Trulli. {t.footer.rights}
           </div>
           <div className="text-[11px] text-[#dfc299]/80 font-sans">
-            Valle d'Itria • Alberobello • Puglia
+            Valle d’Itria • Puglia
           </div>
         </div>
 
