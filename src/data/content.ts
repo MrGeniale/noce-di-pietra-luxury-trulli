@@ -170,7 +170,7 @@ export const content: { it: ContentData; en: ContentData } = {
         { value: '5 min', label: 'Da Alberobello UNESCO' },
         { value: '100%', label: 'Privacy & Relax Esclusivo' },
         { value: '4 Posti', label: 'Capienza Massima Ospiti' },
-        { value: '38°C', label: 'Vasca Idromassaggio Riscaldata' },
+        { value: 'Max 40°C', label: 'Vasca Idromassaggio Riscaldata' },
       ],
     },
     spaces: {
@@ -390,7 +390,7 @@ export const content: { it: ContentData; en: ContentData } = {
         { value: '5 min', label: 'From Alberobello UNESCO' },
         { value: '100%', label: 'Exclusive Privacy' },
         { value: '4 Guests', label: 'Maximum Capacity' },
-        { value: '38°C', label: 'Heated Hydromassage Tub' },
+        { value: 'Max 40°C', label: 'Heated Hydromassage Tub' },
       ],
     },
     spaces: {
