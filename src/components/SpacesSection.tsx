@@ -32,8 +32,8 @@ export const SpacesSection: React.FC = () => {
           <div className="w-16 h-[2px] bg-[#c5a880] mx-auto mt-6" />
         </div>
 
-        {/* Tab Buttons */}
-        <div className="flex flex-wrap justify-center gap-2 sm:gap-3 mb-12">
+        {/* Tab Buttons: 2x2 grid on mobile for perfect symmetry, inline flex on tablet/desktop */}
+        <div className="grid grid-cols-2 sm:flex sm:flex-wrap sm:justify-center gap-2 sm:gap-3 mb-8 sm:mb-12 max-w-md sm:max-w-none mx-auto">
           {t.spaces.items.map((item, index) => {
             const IconComponent = icons[index] || Bed;
             const isActive = activeTab === index;
@@ -41,14 +41,14 @@ export const SpacesSection: React.FC = () => {
               <button
                 key={item.id}
                 onClick={() => setActiveTab(index)}
-                className={`flex items-center gap-2.5 px-5 py-3 rounded-full text-xs font-medium tracking-[0.15em] uppercase transition-all duration-300 ${
+                className={`flex items-center justify-center gap-2 sm:gap-2.5 px-3.5 sm:px-5 py-2.5 sm:py-3 rounded-full text-[11px] sm:text-xs font-medium tracking-[0.1em] sm:tracking-[0.15em] uppercase transition-all duration-300 ${
                   isActive
-                    ? 'bg-gradient-to-r from-[#b89360] to-[#9a7644] text-white shadow-lg shadow-[#b89360]/30 scale-105'
+                    ? 'bg-gradient-to-r from-[#b89360] to-[#9a7644] text-white shadow-lg shadow-[#b89360]/30 scale-[1.02] sm:scale-105 font-semibold'
                     : 'bg-white/5 hover:bg-white/10 text-[#d6cdbf] border border-white/10'
                 }`}
               >
-                <IconComponent className={`w-4 h-4 ${isActive ? 'text-white' : 'text-[#dfc299]'}`} />
-                <span>{item.tag}</span>
+                <IconComponent className={`w-3.5 sm:w-4 h-3.5 sm:h-4 shrink-0 ${isActive ? 'text-white' : 'text-[#dfc299]'}`} />
+                <span className="truncate">{item.tag}</span>
               </button>
             );
           })}

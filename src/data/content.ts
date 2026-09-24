@@ -181,7 +181,7 @@ export const content: { it: ContentData; en: ContentData } = {
         {
           id: 'bedroom',
           title: 'Camera Padronale sotto il Cono',
-          tag: 'Suite Matrimoniale',
+          tag: 'Camera',
           desc: 'Un’alcova romantica e accogliente racchiusa sotto la maestosa cupola in pietra. Letto king-size con materasso ortopedico premium, biancheria in puro cotone e illuminazione d’atmosfera calda e rilassante.',
           image: '/images/img_8213.jpg',
           features: ['Letto Matrimoniale King Size', 'Volte in pietra a vista', 'Armadio su misura', 'Climatizzazione autonoma'],
@@ -189,7 +189,7 @@ export const content: { it: ContentData; en: ContentData } = {
         {
           id: 'living',
           title: 'Soggiorno di Charme con Divano Letto',
-          tag: 'Zona Living',
+          tag: 'Soggiorno',
           desc: 'Un ambiente spazioso e luminoso con comodo divano letto matrimoniale per ospitare fino a 4 persone in totale comodità, arricchito da Smart TV e connessione Wi-Fi ultra veloce.',
           image: '/images/img_8204.jpg',
           features: ['Divano Letto Matrimoniale', 'Smart TV Ultra HD', 'Zona pranzo conviviale', 'Illuminazione LED soffusa'],
@@ -197,7 +197,7 @@ export const content: { it: ContentData; en: ContentData } = {
         {
           id: 'kitchen',
           title: 'Cucina Attrezzata di Design',
-          tag: 'Cucina & Breakfast Corner',
+          tag: 'Cucina',
           desc: 'Completa di piano cottura a induzione, frigorifero, forno, lavastoviglie, lavatrice, macchina del caffè espresso, bollitore, tostapane e moka per il massimo del comfort.',
           image: '/images/img_8207.jpg',
           features: ['Piano cottura & Forno', 'Lavastoviglie & Lavatrice', 'Macchina espresso con cialde & Moka', 'Frigo & Set stoviglie completo'],
@@ -205,7 +205,7 @@ export const content: { it: ContentData; en: ContentData } = {
         {
           id: 'garden',
           title: 'Spazio Esterno & Giardino Privato',
-          tag: 'Outdoor & Solarium',
+          tag: 'Giardino & Patio',
           desc: 'Un ampio patio esterno privato pavimentato in chianche tradizionali con area relax, lettini prendisole, parcheggio riservato all’interno della proprietà e vasca idromassaggio.',
           image: '/images/img_8196.jpg',
           features: ['Parcheggio privato gratuito', 'Area solarium & relax', 'Patio con tavolo all’aperto', 'Panorama sulla Valle d’Itria'],
@@ -401,7 +401,7 @@ export const content: { it: ContentData; en: ContentData } = {
         {
           id: 'bedroom',
           title: 'Master Bedroom under the Cone',
-          tag: 'Master Suite',
+          tag: 'Bedroom',
           desc: 'A romantic, tranquil alcove nestled directly under the grand limestone cone. King-size bed with premium orthopedic mattress, fine Italian linens, and soft ambient lighting.',
           image: '/images/img_8213.jpg',
           features: ['King Size Double Bed', 'Exposed historic stone vaults', 'Custom wardrobe', 'Independent Climate Control'],
@@ -409,7 +409,7 @@ export const content: { it: ContentData; en: ContentData } = {
         {
           id: 'living',
           title: 'Charming Living Room with Sofa Bed',
-          tag: 'Living Area',
+          tag: 'Living Room',
           desc: 'Spacious and inviting living salon with a comfortable double sofa bed to accommodate up to 4 guests in absolute style, equipped with Smart TV and high-speed Wi-Fi.',
           image: '/images/img_8204.jpg',
           features: ['Comfortable Double Sofa Bed', 'Ultra HD Smart TV', 'Convivial dining area', 'Warm ambient LED lighting'],
@@ -417,7 +417,7 @@ export const content: { it: ContentData; en: ContentData } = {
         {
           id: 'kitchen',
           title: 'Designer Fully Equipped Kitchen',
-          tag: 'Kitchen & Breakfast Corner',
+          tag: 'Kitchen',
           desc: 'Equipped with induction cooktop, refrigerator, oven, dishwasher, washing machine, espresso coffee machine, kettle, toaster and moka for supreme comfort.',
           image: '/images/img_8207.jpg',
           features: ['Induction stovetop & Oven', 'Dishwasher & Washing machine', 'Espresso machine & Moka', 'Fridge & Full dinnerware'],
@@ -425,7 +425,7 @@ export const content: { it: ContentData; en: ContentData } = {
         {
           id: 'garden',
           title: 'Outdoor Space & Private Garden',
-          tag: 'Outdoor & Solarium',
+          tag: 'Garden & Patio',
           desc: 'A sunlit private terrace paved in traditional Apulian limestone chianche, featuring outdoor lounge areas, sunbeds, private gated parking, and heated hydromassage tub.',
           image: '/images/img_8196.jpg',
           features: ['Free private parking', 'Sun lounger relaxation zone', 'Al fresco outdoor dining table', 'Valle d’Itria countryside views'],
