@@ -70,7 +70,9 @@ export const AmenitiesSection: React.FC = () => {
         {/* Extra guarantee strip with Pet Policy */}
         <div className="mt-14 p-6 sm:p-7 rounded-2xl bg-white border border-[#c5a880]/30 text-center max-w-4xl mx-auto shadow-md space-y-3">
           <p className="font-serif italic text-base sm:text-lg text-[#5d544f]">
-            «Dalla cura della biancheria alla temperatura ideale dell'acqua: ogni dettaglio è preparato con amore per il vostro arrivo.»
+            {language === 'it'
+              ? '«Dalla cura della biancheria alla temperatura ideale dell\'acqua: ogni dettaglio è preparato con amore per il vostro arrivo.»'
+              : '«From pristine linens to the ideal hot tub temperature: every single detail is prepared with love for your arrival.»'}
           </p>
           <div className="pt-2.5 border-t border-[#c5a880]/20 flex items-center justify-center gap-2 text-xs text-[#8f6a39] font-medium font-sans">
             <ShieldCheck className="w-4 h-4 text-[#b89360] shrink-0" />

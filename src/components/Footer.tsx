@@ -162,7 +162,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenBooking }) => {
                 className="bg-[#b89360] hover:bg-[#c5a06d] text-white px-5 py-2.5 rounded-full text-xs font-medium uppercase tracking-widest shadow-md transition-colors flex items-center gap-2"
               >
                 <MessageCircle className="w-4 h-4 text-emerald-200" />
-                <span>Contattaci su WhatsApp</span>
+                <span>{language === 'it' ? 'Contattaci su WhatsApp' : 'Contact Us on WhatsApp'}</span>
               </button>
 
               <a
@@ -180,7 +180,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenBooking }) => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-[#8c8276] gap-4">
+        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-[#8c8276] gap-4 text-center sm:text-left">
           <div>
             © {new Date().getFullYear()} Noce di Pietra – Luxury Trulli. {t.footer.rights}
           </div>
@@ -194,7 +194,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenBooking }) => {
       {/* Floating WhatsApp Action Pill (Bottom Right - Visible only after scrolling down) */}
       <button
         onClick={onOpenBooking}
-        className={`fixed bottom-6 right-6 z-40 bg-[#25D366] hover:bg-[#22c35e] text-white p-3.5 sm:px-5 sm:py-3.5 rounded-full shadow-2xl flex items-center gap-2.5 transition-all duration-500 border-2 border-white/30 ${
+        className={`fixed bottom-5 right-5 z-40 bg-[#25D366] hover:bg-[#22c35e] text-white p-3.5 sm:px-5 sm:py-3.5 rounded-full shadow-2xl flex items-center gap-2.5 transition-all duration-500 border-2 border-white/30 ${
           isScrolled
             ? 'opacity-100 translate-y-0 pointer-events-auto scale-100'
             : 'opacity-0 translate-y-8 pointer-events-none scale-90'
@@ -203,7 +203,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenBooking }) => {
       >
         <MessageCircle className="w-6 h-6 fill-current animate-pulse" />
         <span className="hidden sm:inline font-medium text-xs tracking-wider uppercase font-sans">
-          WhatsApp Prenotazioni
+          {language === 'it' ? 'WhatsApp Prenotazioni' : 'WhatsApp Booking'}
         </span>
       </button>
     </footer>

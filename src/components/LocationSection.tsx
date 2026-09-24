@@ -4,7 +4,7 @@ import { Sparkles, MapPin, Navigation, ExternalLink, Compass } from 'lucide-reac
 import { externalLinks } from '../data/content';
 
 export const LocationSection: React.FC = () => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
 
   return (
     <section id="posizione" className="py-24 sm:py-32 bg-[#faf7f2] text-[#2c2623] relative">
@@ -37,7 +37,7 @@ export const LocationSection: React.FC = () => {
               <MapPin className="w-5 h-5 text-[#8f6a39] shrink-0 mt-0.5" />
               <div>
                 <span className="text-xs uppercase tracking-wider text-[#8f6a39] font-semibold block">
-                  Indirizzo & Coordinate
+                  {language === 'it' ? 'Indirizzo & Coordinate' : 'Address & Coordinates'}
                 </span>
                 <span className="text-sm text-[#2c2623] font-medium">
                   {t.location.address}
@@ -106,10 +106,14 @@ export const LocationSection: React.FC = () => {
                 <div className="bg-black/60 backdrop-blur-md p-5 rounded-2xl border border-white/20">
                   <h3 className="font-heading text-xl text-[#dfc299]">Noce di Pietra</h3>
                   <p className="text-xs text-[#e8ded1] mt-1">
-                    A soli 5,3 km da Alberobello e dalle bellezze della Valle d'Itria.
+                    {language === 'it'
+                      ? 'A soli 5,3 km da Alberobello e dalle bellezze della Valle d’Itria.'
+                      : 'Just 5.3 km from Alberobello and the scenic gems of Valle d’Itria.'}
                   </p>
                   <div className="mt-4 pt-3 border-t border-white/10 flex items-center justify-between text-xs">
-                    <span className="text-[#dfc299]">Coordinate GPS:</span>
+                    <span className="text-[#dfc299]">
+                      {language === 'it' ? 'Coordinate GPS:' : 'GPS Coordinates:'}
+                    </span>
                     <span className="text-white font-mono">40.7656° N, 17.2758° E</span>
                   </div>
                 </div>
@@ -121,7 +125,9 @@ export const LocationSection: React.FC = () => {
                   className="w-full py-3.5 bg-white text-[#231e1c] hover:bg-[#faf6f0] rounded-xl font-semibold text-xs uppercase tracking-[0.18em] flex items-center justify-center gap-2 shadow-lg transition-colors"
                 >
                   <MapPin className="w-4 h-4 text-[#8f6a39]" />
-                  <span>Apri Navigatore su Google Maps</span>
+                  <span>
+                    {language === 'it' ? 'Apri Navigatore su Google Maps' : 'Open GPS on Google Maps'}
+                  </span>
                 </a>
               </div>
 

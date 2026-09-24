@@ -92,7 +92,9 @@ export const JacuzziSection: React.FC<JacuzziProps> = ({ onOpenBooking }) => {
               className="w-full bg-gradient-to-r from-[#b89360] via-[#c5a06d] to-[#9a7644] hover:from-[#c5a06d] hover:to-[#b89360] text-white py-4 px-6 rounded-2xl font-medium tracking-[0.18em] uppercase text-xs flex items-center justify-center gap-3 shadow-xl transition-all duration-300 transform hover:-translate-y-0.5"
             >
               <MessageCircle className="w-4 h-4 text-emerald-300 animate-pulse" />
-              <span>Prenota con Idromassaggio Esclusivo</span>
+              <span>
+                {language === 'it' ? 'Prenota con Idromassaggio Esclusivo' : 'Book with Exclusive Hot Tub'}
+              </span>
             </button>
 
           </div>

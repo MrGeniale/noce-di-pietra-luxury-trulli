@@ -101,12 +101,12 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBooking }) => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.7 }}
-          className="hidden sm:flex flex-wrap items-center justify-center gap-3 md:gap-4 mt-8"
+          className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mt-6 sm:mt-8"
         >
           {t.hero.features.map((feat, i) => (
             <span
               key={i}
-              className="px-3.5 py-1 rounded-md bg-black/40 backdrop-blur-sm border border-white/15 text-xs text-[#e8ded1] tracking-wider"
+              className="px-2.5 sm:px-3.5 py-1 rounded-full bg-black/40 backdrop-blur-sm border border-white/20 text-[10px] sm:text-xs text-[#e8ded1] tracking-wider font-light"
             >
               ✦ {feat}
             </span>
