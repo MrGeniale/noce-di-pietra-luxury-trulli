@@ -38,7 +38,7 @@ export const JacuzziSection: React.FC<JacuzziProps> = ({ onOpenBooking }) => {
           {/* Main Large Visual Card */}
           <div className="lg:col-span-7 relative group rounded-3xl overflow-hidden border border-[#c5a880]/30 shadow-2xl">
             <img
-              src="/images/img_8224.jpg"
+              src="/images/jacuzzi-relax.jpg"
               alt="Vasca Idromassaggio Noce di Pietra Luxury Trulli"
               className="w-full h-[400px] sm:h-[500px] object-cover object-center transform group-hover:scale-105 transition-transform duration-700"
             />

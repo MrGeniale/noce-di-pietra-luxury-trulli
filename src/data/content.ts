@@ -239,17 +239,17 @@ export const content: { it: ContentData; en: ContentData } = {
         {
           icon: 'Car',
           title: 'Parcheggio Privato Gratuito',
-          desc: 'Ampio parcheggio recintato all’interno della tenuta ad uso esclusivo.',
+          desc: 'Ampio parcheggio all’interno della tenuta ad uso esclusivo.',
         },
         {
           icon: 'Wifi',
-          title: 'Wi-Fi ad Alta Velocità',
-          desc: 'Connessione Internet veloce e stabile in tutta la struttura e all’aperto.',
+          title: 'Connessione Wi-Fi',
+          desc: 'Connessione Internet stabile in tutta la struttura.',
         },
         {
           icon: 'Flame',
           title: 'Cucina Completa & Attrezzata',
-          desc: 'Piano cottura, frigo, microonde, stoviglie e macchina del caffè espresso.',
+          desc: 'Piano cottura ad induzione, frigo, forno, lavastoviglie, bollitore d\'acqua calda, tostapane, moka e macchina del caffè espresso.',
         },
         {
           icon: 'Wind',
@@ -264,12 +264,12 @@ export const content: { it: ContentData; en: ContentData } = {
         {
           icon: 'Coffee',
           title: 'Welcome Corner & Caffè',
-          desc: 'Selezione di cialde caffè, tisane, acqua minerale e prodotti tipici di benvenuto.',
+          desc: 'Selezione di cialde caffè, acqua minerale e prodotti tipici di benvenuto.',
         },
         {
           icon: 'ShieldCheck',
           title: 'Privacy & Tranquillità Totale',
-          desc: 'Nessun altro ospite nella tenuta: l’intera struttura è solo per voi.',
+          desc: 'Un\'oasi di privacy, ad uso esclusivo dei nostri ospiti.',
         },
       ],
     },
@@ -458,18 +458,18 @@ export const content: { it: ContentData; en: ContentData } = {
         },
         {
           icon: 'Car',
-          title: 'Free Private Gated Parking',
-          desc: 'Spacious on-site secure parking within the private gated estate.',
+          title: 'Free Private Parking',
+          desc: 'Spacious on-site parking within the estate for exclusive use.',
         },
         {
           icon: 'Wifi',
-          title: 'High-Speed Wi-Fi',
-          desc: 'Fast and reliable Internet access inside the trullo and across outdoor areas.',
+          title: 'Wi-Fi Connection',
+          desc: 'Stable Internet connection throughout the property.',
         },
         {
           icon: 'Flame',
           title: 'Fully Equipped Kitchen',
-          desc: 'Cooktop, fridge, microwave, espresso machine, and complete dinnerware.',
+          desc: 'Induction cooktop, fridge, oven, dishwasher, hot water kettle, toaster, moka and espresso machine.',
         },
         {
           icon: 'Wind',
@@ -484,12 +484,12 @@ export const content: { it: ContentData; en: ContentData } = {
         {
           icon: 'Coffee',
           title: 'Welcome Corner & Coffee',
-          desc: 'Espresso coffee capsules, teas, mineral water, and local welcome treats.',
+          desc: 'Selection of coffee pods, mineral water, and local welcome treats.',
         },
         {
           icon: 'ShieldCheck',
           title: 'Complete Privacy & Quiet',
-          desc: 'No other guests on the property: the entire estate is exclusively for you.',
+          desc: 'A private sanctuary dedicated exclusively to our guests.',
         },
       ],
     },
