@@ -591,10 +591,10 @@ export const galleryImages = [
   },
   {
     id: 3,
-    src: '/images/img_8224.jpg',
+    src: '/images/jacuzzi-experience-1.jpg',
     category: 'jacuzzi',
-    title: { it: 'Vasca Idromassaggio Notturna', en: 'Illuminated Night Hot Tub' },
-    subtitle: { it: 'Relax sotto le stelle con cromoterapia', en: 'Starlit relaxation with chromotherapy' },
+    title: { it: 'Aperitivo & Idromassaggio', en: 'Aperitif & Hot Tub Experience' },
+    subtitle: { it: 'Momenti di puro benessere all’aperto', en: 'Pure outdoor wellness moments' },
   },
   {
     id: 4,
@@ -612,10 +612,10 @@ export const galleryImages = [
   },
   {
     id: 6,
-    src: '/images/img_8222.jpg',
+    src: '/images/jacuzzi-experience-2.jpg',
     category: 'jacuzzi',
-    title: { it: 'Area Idromassaggio & Lounge', en: 'Hot Tub & Lounge Deck' },
-    subtitle: { it: 'Relax privato all’aperto', en: 'Private outdoor wellness' },
+    title: { it: 'Idromassaggio tra gli Ulivi', en: 'Hot Tub Among Olive Trees' },
+    subtitle: { it: 'Natura, silenzio e totale privacy', en: 'Nature, silence and absolute privacy' },
   },
   {
     id: 7,
@@ -633,10 +633,10 @@ export const galleryImages = [
   },
   {
     id: 9,
-    src: '/images/img_8226.jpg',
+    src: '/images/img_8224.jpg',
     category: 'jacuzzi',
-    title: { it: 'Tramonto sull’Idromassaggio', en: 'Sunset over the Jacuzzi' },
-    subtitle: { it: 'Atmosfera magica al crepuscolo', en: 'Magical dusk atmosphere' },
+    title: { it: 'Vasca Idromassaggio Notturna', en: 'Illuminated Night Hot Tub' },
+    subtitle: { it: 'Relax sotto le stelle con cromoterapia', en: 'Starlit relaxation with chromotherapy' },
   },
   {
     id: 10,
