@@ -9,18 +9,35 @@ export const QuickBookingBar: React.FC = () => {
   const [checkOut, setCheckOut] = useState('');
   const [guests, setGuests] = useState('2');
 
+  const getMinCheckOut = (inDate: string) => {
+    if (!inDate) return undefined;
+    const d = new Date(inDate);
+    d.setDate(d.getDate() + 2);
+    return d.toISOString().split('T')[0];
+  };
+
+  const handleCheckInChange = (val: string) => {
+    setCheckIn(val);
+    if (val) {
+      const minOut = getMinCheckOut(val);
+      if (checkOut && checkOut < (minOut || '')) {
+        setCheckOut(minOut || '');
+      }
+    }
+  };
+
   const handleWhatsAppRedirect = (e: React.FormEvent) => {
     e.preventDefault();
     
     let text = '';
     if (language === 'it') {
-      text = `Salve! Vorrei richiedere informazioni e disponibilità per un soggiorno a Noce di Pietra Luxury Trulli`;
+      text = `Salve! Vorrei richiedere informazioni e disponibilità per un soggiorno a Noce di Pietra Luxury Trulli (min. 2 notti)`;
       if (checkIn && checkOut) {
         text += ` dal ${checkIn} al ${checkOut}`;
       }
       text += ` per ${guests} ${guests === '1' ? 'ospite' : 'ospiti'}. Potreste indicarmi la tariffa riservata per prenotazione diretta? Grazie!`;
     } else {
-      text = `Hello! I would like to request availability and rates for a stay at Noce di Pietra Luxury Trulli`;
+      text = `Hello! I would like to request availability and rates for a stay at Noce di Pietra Luxury Trulli (min. 2 nights)`;
       if (checkIn && checkOut) {
         text += ` from ${checkIn} to ${checkOut}`;
       }
@@ -41,6 +58,11 @@ export const QuickBookingBar: React.FC = () => {
           <h3 className="font-heading text-xl sm:text-2xl text-white font-normal">
             {language === 'it' ? 'Verifica la Tua Data' : 'Check Your Dates'}
           </h3>
+          <div className="mt-1.5">
+            <span className="inline-block text-[11px] text-[#dfc299] bg-white/5 border border-[#dfc299]/30 px-3 py-0.5 rounded-full font-medium">
+              {language === 'it' ? '✦ Soggiorno minimo: 2 notti' : '✦ Minimum stay: 2 nights'}
+            </span>
+          </div>
         </div>
 
         <div className="bg-[#1e1b19] border border-[#c5a880]/30 rounded-2xl md:rounded-full p-4 sm:p-5 md:p-4 shadow-2xl shadow-black/40 backdrop-blur-xl">
@@ -57,7 +79,7 @@ export const QuickBookingBar: React.FC = () => {
                 id="quick-checkin"
                 type="date"
                 value={checkIn}
-                onChange={(e) => setCheckIn(e.target.value)}
+                onChange={(e) => handleCheckInChange(e.target.value)}
                 className="w-full bg-transparent text-xs text-[#faf6f0] focus:outline-none cursor-pointer [color-scheme:dark]"
               />
             </div>
@@ -67,14 +89,15 @@ export const QuickBookingBar: React.FC = () => {
           <div className="flex items-center gap-3 bg-white/5 hover:bg-white/10 border border-white/10 rounded-xl md:rounded-full px-4 py-3 transition-colors">
             <Calendar className="w-5 h-5 text-[#dfc299] shrink-0" />
             <div className="flex-1">
-              <label htmlFor="quick-checkout" className="block text-[10px] uppercase tracking-wider text-[#dfc299] font-medium">
-                {t.bookingBar.checkOut}
+              <label htmlFor="quick-checkout" className="block text-[10px] uppercase tracking-wider text-[#dfc299] font-medium flex items-center justify-between">
+                <span>{t.bookingBar.checkOut}</span>
+                <span className="text-[9px] text-[#dfc299]/80 font-normal">Min. 2 notti</span>
               </label>
               <input
                 id="quick-checkout"
                 type="date"
                 value={checkOut}
-                min={checkIn || undefined}
+                min={getMinCheckOut(checkIn) || undefined}
                 onChange={(e) => setCheckOut(e.target.value)}
                 className="w-full bg-transparent text-xs text-[#faf6f0] focus:outline-none cursor-pointer [color-scheme:dark]"
               />
@@ -122,6 +145,10 @@ export const QuickBookingBar: React.FC = () => {
             {language === 'it' ? 'Miglior Tariffa Garantita' : 'Best Direct Rate'}
           </span>
           <span className="hidden sm:inline text-white/30">•</span>
+          <span className="flex items-center gap-1.5">
+            <CheckCircle2 className="w-3.5 h-3.5 text-[#dfc299]" />
+            {language === 'it' ? 'Soggiorno Minimo 2 Notti' : 'Minimum Stay 2 Nights'}
+          </span>
           <span className="hidden sm:inline text-white/30">•</span>
           <span className="flex items-center gap-1.5">
             <CheckCircle2 className="w-3.5 h-3.5 text-[#dfc299]" />
