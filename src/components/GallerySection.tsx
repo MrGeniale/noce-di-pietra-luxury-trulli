@@ -8,6 +8,7 @@ export const GallerySection: React.FC = () => {
   const { t, language } = useLanguage();
   const [filter, setFilter] = useState('all');
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
+  const [showAllMobile, setShowAllMobile] = useState(false);
 
   const filterButtons = [
     { id: 'all', label: t.gallery.all },
@@ -18,7 +19,7 @@ export const GallerySection: React.FC = () => {
     { id: 'bathroom', label: t.gallery.bathroom },
   ];
 
-  const filteredImages =
+  const allFiltered =
     filter === 'all'
       ? galleryImages
       : galleryImages.filter((img) => img.category === filter);
@@ -29,15 +30,15 @@ export const GallerySection: React.FC = () => {
       if (lightboxIndex === null) return;
       if (e.key === 'Escape') setLightboxIndex(null);
       if (e.key === 'ArrowRight') {
-        setLightboxIndex((prev) => (prev! + 1) % filteredImages.length);
+        setLightboxIndex((prev) => (prev! + 1) % allFiltered.length);
       }
       if (e.key === 'ArrowLeft') {
-        setLightboxIndex((prev) => (prev! - 1 + filteredImages.length) % filteredImages.length);
+        setLightboxIndex((prev) => (prev! - 1 + allFiltered.length) % allFiltered.length);
       }
     };
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [lightboxIndex, filteredImages.length]);
+  }, [lightboxIndex, allFiltered.length]);
 
   return (
     <section id="galleria" className="py-24 sm:py-32 bg-[#171513] text-[#faf6f0] relative">
@@ -59,17 +60,18 @@ export const GallerySection: React.FC = () => {
         </div>
 
         {/* Filter Buttons */}
-        <div className="flex flex-wrap justify-center gap-2 sm:gap-3 mb-12">
+        <div className="flex flex-wrap justify-center gap-1.5 sm:gap-3 mb-8 sm:mb-12">
           {filterButtons.map((btn) => (
             <button
               key={btn.id}
               onClick={() => {
                 setFilter(btn.id);
                 setLightboxIndex(null);
+                setShowAllMobile(false);
               }}
-              className={`px-4 py-2 rounded-full text-xs uppercase tracking-[0.15em] font-medium transition-all duration-300 ${
+              className={`px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-[11px] sm:text-xs uppercase tracking-[0.1em] sm:tracking-[0.15em] font-medium transition-all duration-300 ${
                 filter === btn.id
-                  ? 'bg-[#b89360] text-white shadow-lg shadow-[#b89360]/30'
+                  ? 'bg-[#b89360] text-white shadow-lg shadow-[#b89360]/30 font-semibold'
                   : 'bg-white/5 hover:bg-white/10 text-[#cfc5b6] border border-white/10'
               }`}
             >
@@ -78,45 +80,63 @@ export const GallerySection: React.FC = () => {
           ))}
         </div>
 
-        {/* Masonry / Responsive Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredImages.map((img, idx) => (
-            <motion.div
-              layout
-              key={img.id}
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.95 }}
-              transition={{ duration: 0.4 }}
-              className="group relative h-80 rounded-2xl overflow-hidden cursor-pointer bg-[#231f1c] border border-white/10 shadow-lg"
-              onClick={() => setLightboxIndex(idx)}
-            >
-              <img
-                src={img.src}
-                alt={img.title[language]}
-                className="w-full h-full object-cover object-center transform group-hover:scale-110 transition-transform duration-700"
-                loading="lazy"
-              />
-              
-              {/* Gradient Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              
-              {/* Hover Text & Icon */}
-              <div className="absolute inset-0 p-6 flex flex-col justify-end transform translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300">
-                <span className="text-[10px] uppercase tracking-[0.25em] text-[#dfc299] font-sans">
-                  {img.subtitle[language]}
-                </span>
-                <h4 className="font-heading text-lg text-white font-medium">
-                  {img.title[language]}
-                </h4>
-              </div>
+        {/* Responsive Grid: 2-col on mobile, 3-col on desktop */}
+        <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-6">
+          {allFiltered.map((img, idx) => {
+            // If on mobile and not showAll, hide items after index 5 when in 'all' filter
+            const isHiddenMobile = !showAllMobile && filter === 'all' && idx >= 6;
+            return (
+              <motion.div
+                layout
+                key={img.id}
+                initial={{ opacity: 0, scale: 0.95 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.95 }}
+                transition={{ duration: 0.3 }}
+                className={`group relative h-44 sm:h-80 rounded-xl sm:rounded-2xl overflow-hidden cursor-pointer bg-[#231f1c] border border-white/10 shadow-lg ${
+                  isHiddenMobile ? 'hidden sm:block' : 'block'
+                }`}
+                onClick={() => setLightboxIndex(idx)}
+              >
+                <img
+                  src={img.src}
+                  alt={img.title[language]}
+                  className="w-full h-full object-cover object-center transform group-hover:scale-110 transition-transform duration-700"
+                  loading="lazy"
+                />
+                
+                {/* Gradient Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent opacity-80 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300" />
+                
+                {/* Text & Icon */}
+                <div className="absolute inset-0 p-3 sm:p-6 flex flex-col justify-end transform translate-y-0 sm:translate-y-4 sm:group-hover:translate-y-0 opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-all duration-300">
+                  <span className="text-[9px] sm:text-[10px] uppercase tracking-[0.2em] text-[#dfc299] font-sans line-clamp-1">
+                    {img.subtitle[language]}
+                  </span>
+                  <h4 className="font-heading text-xs sm:text-lg text-white font-medium line-clamp-1">
+                    {img.title[language]}
+                  </h4>
+                </div>
 
-              <div className="absolute top-4 right-4 bg-black/50 backdrop-blur-md p-2 rounded-full text-white/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <Maximize2 className="w-4 h-4" />
-              </div>
-            </motion.div>
-          ))}
+                <div className="hidden sm:block absolute top-4 right-4 bg-black/50 backdrop-blur-md p-2 rounded-full text-white/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <Maximize2 className="w-4 h-4" />
+                </div>
+              </motion.div>
+            );
+          })}
         </div>
+
+        {/* Mobile "Show More Photos" Button */}
+        {allFiltered.length > 6 && !showAllMobile && filter === 'all' && (
+          <div className="mt-8 text-center sm:hidden">
+            <button
+              onClick={() => setShowAllMobile(true)}
+              className="px-6 py-3 rounded-full bg-gradient-to-r from-[#b89360] to-[#9a7644] text-white text-xs font-semibold uppercase tracking-wider shadow-lg"
+            >
+              {language === 'it' ? `Mostra tutte le foto (${allFiltered.length})` : `Show all photos (${allFiltered.length})`}
+            </button>
+          </div>
+        )}
 
       </div>
 
@@ -142,7 +162,7 @@ export const GallerySection: React.FC = () => {
             <button
               onClick={(e) => {
                 e.stopPropagation();
-                setLightboxIndex((prev) => (prev! - 1 + filteredImages.length) % filteredImages.length);
+                setLightboxIndex((prev) => (prev! - 1 + allFiltered.length) % allFiltered.length);
               }}
               className="absolute left-4 sm:left-8 z-50 text-white/80 hover:text-white bg-white/10 hover:bg-white/20 p-3 rounded-full transition-colors"
               aria-label="Previous image"
@@ -153,16 +173,16 @@ export const GallerySection: React.FC = () => {
             {/* Image Container */}
             <div className="max-w-5xl max-h-[85vh] flex flex-col items-center justify-center relative">
               <img
-                src={filteredImages[lightboxIndex].src}
-                alt={filteredImages[lightboxIndex].title[language]}
+                src={allFiltered[lightboxIndex].src}
+                alt={allFiltered[lightboxIndex].title[language]}
                 className="max-h-[75vh] w-auto max-w-full object-contain rounded-xl shadow-2xl border border-white/20"
               />
               <div className="mt-4 text-center">
                 <h3 className="font-heading text-xl text-white">
-                  {filteredImages[lightboxIndex].title[language]}
+                  {allFiltered[lightboxIndex].title[language]}
                 </h3>
                 <p className="text-xs text-[#dfc299] uppercase tracking-widest mt-1">
-                  {filteredImages[lightboxIndex].subtitle[language]} ({lightboxIndex + 1} / {filteredImages.length})
+                  {allFiltered[lightboxIndex].subtitle[language]} ({lightboxIndex + 1} / {allFiltered.length})
                 </p>
               </div>
             </div>
@@ -171,7 +191,7 @@ export const GallerySection: React.FC = () => {
             <button
               onClick={(e) => {
                 e.stopPropagation();
-                setLightboxIndex((prev) => (prev! + 1) % filteredImages.length);
+                setLightboxIndex((prev) => (prev! + 1) % allFiltered.length);
               }}
               className="absolute right-4 sm:right-8 z-50 text-white/80 hover:text-white bg-white/10 hover:bg-white/20 p-3 rounded-full transition-colors"
               aria-label="Next image"

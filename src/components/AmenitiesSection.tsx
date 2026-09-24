@@ -44,22 +44,22 @@ export const AmenitiesSection: React.FC = () => {
           <div className="w-16 h-[2px] bg-[#c5a880] mx-auto mt-6" />
         </div>
 
-        {/* 8-Card Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+        {/* 8-Card Grid: Compact 2-col on mobile, 4-col on desktop */}
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6 lg:gap-8">
           {t.amenities.list.map((item, index) => {
             const Icon = iconMap[item.icon] || Sparkles;
             return (
               <div
                 key={index}
-                className="bg-white border border-[#c5a880]/25 rounded-2xl p-7 shadow-sm hover:shadow-xl hover:border-[#c5a880]/60 transition-all duration-300 transform hover:-translate-y-1 group"
+                className="bg-white border border-[#c5a880]/25 rounded-xl sm:rounded-2xl p-4 sm:p-7 shadow-sm hover:shadow-xl hover:border-[#c5a880]/60 transition-all duration-300 group flex flex-col justify-start"
               >
-                <div className="w-13 h-13 rounded-2xl bg-[#faf7f2] border border-[#c5a880]/30 flex items-center justify-center text-[#8f6a39] group-hover:bg-[#8f6a39] group-hover:text-white transition-colors duration-300 mb-5">
-                  <Icon className="w-6 h-6" />
+                <div className="w-9 h-9 sm:w-12 sm:h-12 rounded-xl bg-[#faf7f2] border border-[#c5a880]/30 flex items-center justify-center text-[#8f6a39] group-hover:bg-[#8f6a39] group-hover:text-white transition-colors duration-300 mb-3 sm:mb-5 shrink-0">
+                  <Icon className="w-4.5 h-4.5 sm:w-6 sm:h-6" />
                 </div>
-                <h3 className="font-heading text-lg font-semibold text-[#231e1c] mb-2 group-hover:text-[#8f6a39] transition-colors">
+                <h3 className="font-heading text-xs sm:text-lg font-semibold text-[#231e1c] mb-1 sm:mb-2 group-hover:text-[#8f6a39] transition-colors leading-tight">
                   {item.title}
                 </h3>
-                <p className="text-xs sm:text-sm text-[#5d544f] leading-relaxed font-light font-sans">
+                <p className="text-[11px] sm:text-xs md:text-sm text-[#5d544f] leading-snug sm:leading-relaxed font-light font-sans">
                   {item.desc}
                 </p>
               </div>

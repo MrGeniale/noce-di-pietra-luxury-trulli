@@ -37,13 +37,13 @@ export const DirectBookingSection: React.FC<DirectBookingProps> = ({ onOpenBooki
               {t.directBooking.desc}
             </p>
 
-            {/* 4 Perks Grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 pt-4 text-left">
+            {/* 4 Perks Grid: Compact 2x2 on mobile, 4-col on desktop */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-2.5 sm:gap-6 pt-2 sm:pt-4 text-left">
               {t.directBooking.perks.map((perk, i) => (
-                <div key={i} className="bg-white/5 border border-white/10 rounded-2xl p-5 hover:bg-white/10 transition-colors">
-                  <CheckCircle2 className="w-5 h-5 text-[#dfc299] mb-3" />
-                  <h4 className="font-heading text-sm font-semibold text-white mb-1">{perk.title}</h4>
-                  <p className="text-xs text-[#bcb2a3] font-light leading-relaxed">{perk.desc}</p>
+                <div key={i} className="bg-white/5 border border-white/10 rounded-xl sm:rounded-2xl p-3 sm:p-5 hover:bg-white/10 transition-colors flex flex-col justify-start">
+                  <CheckCircle2 className="w-4 h-4 sm:w-5 sm:h-5 text-[#dfc299] mb-1.5 sm:mb-3 shrink-0" />
+                  <h4 className="font-heading text-xs sm:text-sm font-semibold text-white mb-1 leading-snug">{perk.title}</h4>
+                  <p className="text-[10px] sm:text-xs text-[#bcb2a3] font-light leading-snug sm:leading-relaxed">{perk.desc}</p>
                 </div>
               ))}
             </div>
