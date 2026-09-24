@@ -184,8 +184,21 @@ export const Footer: React.FC<FooterProps> = ({ onOpenBooking }) => {
           <div>
             © {new Date().getFullYear()} Noce di Pietra – Luxury Trulli. {t.footer.rights}
           </div>
-          <div className="text-[11px] text-[#dfc299]/80 font-sans">
-            Valle d’Itria • Puglia
+          <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4 text-[11px] font-sans">
+            <span className="text-[#dfc299]/80">Valle d’Itria • Puglia</span>
+            <span className="hidden sm:inline text-white/20">•</span>
+            <span className="text-[#a89d8f]">
+              Realizzato da{' '}
+              <a
+                href="https://www.agenziageniale.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#dfc299] hover:text-white hover:underline transition-colors font-medium"
+              >
+                Agenzia Geniale
+              </a>{' '}
+              di Roberto Olivieri
+            </span>
           </div>
         </div>
 
