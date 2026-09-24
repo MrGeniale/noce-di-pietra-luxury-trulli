@@ -1,13 +1,13 @@
 import React from 'react';
 import { useLanguage } from '../context/LanguageContext';
-import { Sparkles, MessageCircle, Moon, Waves, ShieldCheck, Flame } from 'lucide-react';
+import { Sparkles, MessageCircle, Waves, ShieldCheck, Flame } from 'lucide-react';
 
 interface JacuzziProps {
   onOpenBooking: () => void;
 }
 
 export const JacuzziSection: React.FC<JacuzziProps> = ({ onOpenBooking }) => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
 
   return (
     <section id="idromassaggio" className="py-24 sm:py-32 bg-[#12100e] text-[#faf6f0] relative overflow-hidden">
@@ -46,17 +46,14 @@ export const JacuzziSection: React.FC<JacuzziProps> = ({ onOpenBooking }) => {
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
             
             {/* Bottom floating badge */}
-            <div className="absolute bottom-6 left-6 right-6 flex items-center justify-between">
-              <div>
-                <span className="text-xs uppercase tracking-widest text-[#dfc299] font-sans font-medium">
+            <div className="absolute bottom-6 left-6 right-6">
+              <div className="inline-block bg-black/60 backdrop-blur-md px-5 py-3 rounded-2xl border border-white/15 shadow-xl">
+                <span className="text-xs uppercase tracking-widest text-[#dfc299] font-sans font-medium block">
                   Valle d'Itria Wellness
                 </span>
                 <h4 className="font-heading text-lg sm:text-xl text-white font-normal mt-0.5">
-                  Relax Esclusivo Sotto le Stelle
+                  {language === 'it' ? 'Puro Relax & Benessere Esclusivo' : 'Pure Relaxation & Exclusive Wellness'}
                 </h4>
-              </div>
-              <div className="bg-[#b89360] text-white p-3 rounded-2xl shadow-lg shrink-0">
-                <Moon className="w-6 h-6" />
               </div>
             </div>
           </div>
