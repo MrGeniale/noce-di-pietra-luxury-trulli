@@ -41,8 +41,8 @@ export const AboutSection: React.FC = () => {
             {/* Secondary Floating Image */}
             <div className="hidden sm:block absolute -bottom-8 -right-6 w-60 h-60 z-20 rounded-2xl overflow-hidden shadow-2xl border-4 border-white">
               <img
-                src="/images/img_8201.jpg"
-                alt="Dettaglio pietra Noce di Pietra"
+                src="/images/img_8224.jpg"
+                alt="Vasca Idromassaggio Noce di Pietra"
                 className="w-full h-full object-cover object-center"
               />
             </div>
