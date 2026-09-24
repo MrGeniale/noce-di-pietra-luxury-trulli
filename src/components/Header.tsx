@@ -56,7 +56,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenBooking }) => {
           {/* Desktop Center Brand Location Tagline */}
           <div className="hidden lg:flex items-center justify-center">
             <span className="text-[10px] uppercase tracking-[0.35em] text-[#dfc299]/80 font-sans border-b border-[#dfc299]/30 pb-0.5">
-              Valle d’Itria • Alberobello • Puglia
+              Valle d’Itria • Puglia
             </span>
           </div>
 
