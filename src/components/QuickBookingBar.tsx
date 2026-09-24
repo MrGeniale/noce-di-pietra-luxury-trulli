@@ -147,12 +147,12 @@ export const QuickBookingBar: React.FC = () => {
           <span className="hidden sm:inline text-white/30">•</span>
           <span className="flex items-center gap-1.5">
             <CheckCircle2 className="w-3.5 h-3.5 text-[#dfc299]" />
-            {language === 'it' ? 'Soggiorno Minimo 2 Notti' : 'Minimum Stay 2 Nights'}
+            {language === 'it' ? 'Minimo 2 Notti' : 'Min. 2 Nights'}
           </span>
           <span className="hidden sm:inline text-white/30">•</span>
           <span className="flex items-center gap-1.5">
             <CheckCircle2 className="w-3.5 h-3.5 text-[#dfc299]" />
-            {language === 'it' ? 'Nessun Costo d’Intermediazione' : 'Zero Middleman Booking Fees'}
+            {language === 'it' ? 'Check-in 15:00–18:00 • Check-out 10:00' : 'Check-in 3:00–6:00 PM • Check-out 10:00 AM'}
           </span>
         </div>
 

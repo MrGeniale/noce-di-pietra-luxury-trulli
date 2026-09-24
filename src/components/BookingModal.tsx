@@ -123,9 +123,12 @@ export const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose }) =
             <h3 className="font-heading text-2xl font-semibold text-white">
               {language === 'it' ? 'Richiedi Disponibilità' : 'Check Availability'}
             </h3>
-            <div className="flex items-center justify-center gap-2 mt-2">
+            <div className="flex flex-wrap items-center justify-center gap-2 mt-2">
               <span className="inline-block bg-[#b89360]/20 border border-[#b89360]/40 text-[#dfc299] text-[11px] px-3 py-1 rounded-full font-medium">
-                {language === 'it' ? '✦ Soggiorno Minimo: 2 Notti' : '✦ Minimum Stay: 2 Nights'}
+                {language === 'it' ? '✦ Minimo: 2 Notti' : '✦ Minimum: 2 Nights'}
+              </span>
+              <span className="inline-block bg-white/10 border border-white/15 text-[#e8ded1] text-[11px] px-3 py-1 rounded-full font-sans">
+                {language === 'it' ? '🕒 Check-in 15:00–18:00 • Check-out 10:00' : '🕒 Check-in 3–6 PM • Check-out 10 AM'}
               </span>
             </div>
             <p className="text-xs text-[#c9bfae] mt-2 font-light">
@@ -152,8 +155,9 @@ export const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose }) =
 
             <div className="grid grid-cols-2 gap-3">
               <div>
-                <label className="block text-xs uppercase tracking-wider text-[#dfc299] mb-1 font-medium">
-                  {language === 'it' ? 'Check-in' : 'Check-in'}
+                <label className="block text-xs uppercase tracking-wider text-[#dfc299] mb-1 font-medium flex items-center justify-between">
+                  <span>{language === 'it' ? 'Check-in' : 'Check-in'}</span>
+                  <span className="text-[10px] text-[#dfc299]/70 font-normal">15:00 - 18:00</span>
                 </label>
                 <input
                   type="date"
@@ -165,7 +169,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose }) =
               <div>
                 <label className="block text-xs uppercase tracking-wider text-[#dfc299] mb-1 font-medium flex items-center justify-between">
                   <span>{language === 'it' ? 'Check-out' : 'Check-out'}</span>
-                  <span className="text-[10px] text-[#dfc299]/70 font-normal">Min. 2 notti</span>
+                  <span className="text-[10px] text-[#dfc299]/70 font-normal">10:00 (Min. 2 notti)</span>
                 </label>
                 <input
                   type="date"

@@ -15,7 +15,7 @@ export const GallerySection: React.FC = () => {
     { id: 'bedroom', label: t.gallery.bedroom },
     { id: 'jacuzzi', label: t.gallery.jacuzzi },
     { id: 'living', label: t.gallery.living },
-    { id: 'details', label: t.gallery.details },
+    { id: 'bathroom', label: t.gallery.bathroom },
   ];
 
   const filteredImages =

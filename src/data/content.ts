@@ -78,7 +78,7 @@ export interface ContentData {
     bedroom: string;
     jacuzzi: string;
     living: string;
-    details: string;
+    bathroom: string;
   };
   location: {
     badge: string;
@@ -282,7 +282,7 @@ export const content: { it: ContentData; en: ContentData } = {
       bedroom: 'Camera Padronale',
       jacuzzi: 'Idromassaggio & Relax',
       living: 'Soggiorno & Cucina',
-      details: 'Dettagli di Charme',
+      bathroom: 'Bagno',
     },
     location: {
       badge: 'Nel Cuore della Puglia',
@@ -502,7 +502,7 @@ export const content: { it: ContentData; en: ContentData } = {
       bedroom: 'Master Bedroom',
       jacuzzi: 'Hot Tub & Wellness',
       living: 'Living & Kitchen',
-      details: 'Charming Details',
+      bathroom: 'Bathroom',
     },
     location: {
       badge: 'In the Heart of Puglia',
@@ -626,7 +626,7 @@ export const galleryImages = [
   },
   {
     id: 8,
-    src: '/images/img_8201.jpg',
+    src: '/images/img_8212.jpg',
     category: 'bedroom',
     title: { it: 'Dettagli della Camera da Letto', en: 'Bedroom Architectural Details' },
     subtitle: { it: 'Pietra viva scolpita a mano', en: 'Hand-carved original stone' },
@@ -640,10 +640,10 @@ export const galleryImages = [
   },
   {
     id: 10,
-    src: '/images/img_8214.jpg',
-    category: 'details',
-    title: { it: 'Dettagli di Charme & Arredi', en: 'Charming Details & Decor' },
-    subtitle: { it: 'Materiali naturali e finiture d’autore', en: 'Natural textures and refined accents' },
+    src: '/images/img_8200.jpg',
+    category: 'bathroom',
+    title: { it: 'Doccia & Finiture in Pietra', en: 'Walk-in Shower & Stone Details' },
+    subtitle: { it: 'Ampio box doccia e comfort moderno', en: 'Spacious walk-in shower & modern comfort' },
   },
   {
     id: 11,
@@ -654,10 +654,17 @@ export const galleryImages = [
   },
   {
     id: 12,
-    src: '/images/img_8228.jpg',
-    category: 'details',
-    title: { it: 'Elementi della Tradizione Pugliese', en: 'Traditional Puglian Elements' },
-    subtitle: { it: 'Il calore dell’ospitalità autentica', en: 'Warmth of authentic hospitality' },
+    src: '/images/img_8201.jpg',
+    category: 'bathroom',
+    title: { it: 'Bagno Privato di Design', en: 'Designer Private Bathroom' },
+    subtitle: { it: 'Sanitari moderni e dettagli ricercati', en: 'Modern fixtures and refined details' },
+  },
+  {
+    id: 13,
+    src: '/images/img_8202.jpg',
+    category: 'bathroom',
+    title: { it: 'Lavabo & Specchio Illuminato', en: 'Vanity & Illuminated Mirror' },
+    subtitle: { it: 'Set cortesia e morbidi asciugamani', en: 'Complimentary toiletries & plush towels' },
   },
 ];
 
