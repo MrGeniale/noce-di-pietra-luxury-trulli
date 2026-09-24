@@ -68,7 +68,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBooking }) => {
           className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-black/40 backdrop-blur-md border border-[#dfc299]/50 text-[#faf6f0] text-[11px] sm:text-xs uppercase tracking-[0.3em] mb-6 shadow-xl"
         >
           <Sparkles className="w-3.5 h-3.5 text-[#dfc299]" />
-          <span>Valle d'Itria • Alberobello • Puglia</span>
+          <span>Valle d'Itria • Puglia</span>
         </motion.div>
 
         {/* Hero Main Heading */}
