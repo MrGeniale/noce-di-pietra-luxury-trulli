@@ -191,7 +191,7 @@ export const content: { it: ContentData; en: ContentData } = {
           title: 'Soggiorno di Charme con Divano Letto',
           tag: 'Zona Living',
           desc: 'Un ambiente spazioso e luminoso con comodo divano letto matrimoniale per ospitare fino a 4 persone in totale comodità, arricchito da Smart TV e connessione Wi-Fi ultra veloce.',
-          image: '/images/img_8207.jpg',
+          image: '/images/img_8204.jpg',
           features: ['Divano Letto Matrimoniale', 'Smart TV Ultra HD', 'Zona pranzo conviviale', 'Illuminazione LED soffusa'],
         },
         {
@@ -199,7 +199,7 @@ export const content: { it: ContentData; en: ContentData } = {
           title: 'Cucina Attrezzata di Design',
           tag: 'Cucina & Breakfast Corner',
           desc: 'Completa di piano cottura a induzione, frigorifero, forno a microonde, macchina del caffè espresso, bollitore e set completo di stoviglie per gustare i sapori della Puglia in piena libertà.',
-          image: '/images/img_8210.jpg',
+          image: '/images/img_8207.jpg',
           features: ['Piano cottura completo', 'Macchina espresso con cialde', 'Frigorifero & Freezer', 'Set stoviglie e calici'],
         },
         {
@@ -411,7 +411,7 @@ export const content: { it: ContentData; en: ContentData } = {
           title: 'Charming Living Room with Sofa Bed',
           tag: 'Living Area',
           desc: 'Spacious and inviting living salon with a comfortable double sofa bed to accommodate up to 4 guests in absolute style, equipped with Smart TV and high-speed Wi-Fi.',
-          image: '/images/img_8207.jpg',
+          image: '/images/img_8204.jpg',
           features: ['Comfortable Double Sofa Bed', 'Ultra HD Smart TV', 'Convivial dining area', 'Warm ambient LED lighting'],
         },
         {
@@ -419,7 +419,7 @@ export const content: { it: ContentData; en: ContentData } = {
           title: 'Designer Fully Equipped Kitchen',
           tag: 'Kitchen & Breakfast Corner',
           desc: 'Equipped with induction cooktop, refrigerator, microwave oven, espresso coffee machine, kettle, and complete dinnerware to enjoy regional gourmet delights at your own pace.',
-          image: '/images/img_8210.jpg',
+          image: '/images/img_8207.jpg',
           features: ['Full induction stovetop', 'Espresso machine with pods', 'Refrigerator & Freezer', 'Full tableware & wine glasses'],
         },
         {
