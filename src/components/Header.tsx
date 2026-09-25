@@ -29,6 +29,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenBooking }) => {
     { label: t.nav.amenities, href: '#servizi' },
     { label: t.nav.gallery, href: '#galleria' },
     { label: t.nav.location, href: '#posizione' },
+    { label: t.nav.faq, href: '#faq' },
   ];
 
   return (

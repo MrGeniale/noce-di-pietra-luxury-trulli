@@ -103,6 +103,9 @@ export const Footer: React.FC<FooterProps> = ({ onOpenBooking }) => {
               <li>
                 <a href="#posizione" className="hover:text-[#dfc299] transition-colors">{t.nav.location}</a>
               </li>
+              <li>
+                <a href="#faq" className="hover:text-[#dfc299] transition-colors">{t.nav.faq}</a>
+              </li>
             </ul>
           </div>
 

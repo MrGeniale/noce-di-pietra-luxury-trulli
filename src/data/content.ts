@@ -6,6 +6,7 @@ export interface ContentData {
     amenities: string;
     gallery: string;
     location: string;
+    faq: string;
     bookNow: string;
     contact: string;
   };
@@ -120,6 +121,15 @@ export interface ContentData {
       highlight: string;
     }[];
   };
+  faq: {
+    badge: string;
+    title: string;
+    subtitle: string;
+    items: {
+      q: string;
+      a: string;
+    }[];
+  };
   footer: {
     desc: string;
     quickLinks: string;
@@ -140,6 +150,7 @@ export const content: { it: ContentData; en: ContentData } = {
       amenities: 'I Servizi',
       gallery: 'Galleria',
       location: 'Posizione',
+      faq: 'Domande Frequenti',
       bookNow: 'Prenota Ora',
       contact: 'Contatti',
     },
@@ -342,6 +353,37 @@ export const content: { it: ContentData; en: ContentData } = {
         },
       ],
     },
+    faq: {
+      badge: 'Domande Frequenti',
+      title: 'Tutto Quello che C’è da Sapere',
+      subtitle: 'Risposte chiare alle domande più frequenti sul vostro soggiorno a Noce di Pietra.',
+      items: [
+        {
+          q: 'La vasca idromassaggio è privata e ad uso esclusivo?',
+          a: 'Sì, la vasca idromassaggio è riscaldata (fino a 40°C), dotata di getti idroterapici e cromoterapia serale, ed è riservata all’uso totalmente esclusivo degli ospiti della dimora.',
+        },
+        {
+          q: 'Quanto dista Noce di Pietra da Alberobello e dai borghi della Valle d’Itria?',
+          a: 'Noce di Pietra si trova a soli 5,3 km dal centro storico e dal Trullo Sovrano di Alberobello (circa 6 min di auto), 8 km da Martina Franca e 7 km da Locorotondo. Una posizione ideale e silenziosa per visitare tutta la Puglia.',
+        },
+        {
+          q: 'Quali sono gli orari di check-in e check-out?',
+          a: 'Il check-in si effettua dalle ore 15:00 alle ore 18:00, mentre il check-out è previsto entro le ore 10:00. Per orari di arrivo particolari è possibile concordare direttamente con l’host su WhatsApp.',
+        },
+        {
+          q: 'È presente un parcheggio privato gratuito all’interno della tenuta?',
+          a: 'Sì, la struttura dispone di un ampio parcheggio privato gratuito all’interno della proprietà recintata e protetta da cancello, riservato solo a voi.',
+        },
+        {
+          q: 'Qual è il soggiorno minimo richiesto?',
+          a: 'Il soggiorno minimo è di 2 notti, pensato per garantire la massima cura, sanificazione e qualità di ogni singolo dettaglio.',
+        },
+        {
+          q: 'Gli animali domestici sono ammessi?',
+          a: 'Per garantire i più elevati standard di igiene, comfort e massima tranquillità a tutti i nostri ospiti, non sono ammessi animali domestici.',
+        },
+      ],
+    },
     footer: {
       desc: 'Noce di Pietra – Luxury Trulli. Un’oasi esclusiva di fascino e quiete immersa nella Valle d’Itria, a pochi minuti da Alberobello.',
       quickLinks: 'Navigazione',
@@ -360,6 +402,7 @@ export const content: { it: ContentData; en: ContentData } = {
       amenities: 'Amenities',
       gallery: 'Gallery',
       location: 'Location',
+      faq: 'FAQ',
       bookNow: 'Book Now',
       contact: 'Contact',
     },
@@ -559,6 +602,37 @@ export const content: { it: ContentData; en: ContentData } = {
           country: 'Booking.com (Rated 10/10)',
           text: 'Splendid trulli in a peaceful rural countryside setting. A very warm welcome despite our late evening arrival. Paola and her brothers provided everything we needed. Thank you so much for the wonderful time spent together.',
           highlight: 'Fantastic and beautiful trulli in a peaceful setting',
+        },
+      ],
+    },
+    faq: {
+      badge: 'Frequently Asked Questions',
+      title: 'Everything You Need to Know',
+      subtitle: 'Clear answers to common questions about your stay at Noce di Pietra.',
+      items: [
+        {
+          q: 'Is the jacuzzi hot tub private and exclusively for our stay?',
+          a: 'Yes, the hot tub is heated (up to 40°C), equipped with therapeutic massage jets and evening chromotherapy, and is 100% private and exclusively reserved for your stay.',
+        },
+        {
+          q: 'How far is Noce di Pietra from Alberobello and Valle d’Itria towns?',
+          a: 'Noce di Pietra is located only 5.3 km from Alberobello’s UNESCO historic center (approx. 6 minutes by car), 8 km from baroque Martina Franca, and 7 km from Locorotondo. A tranquil, prime base to explore all of Puglia.',
+        },
+        {
+          q: 'What are the check-in and check-out times?',
+          a: 'Check-in is from 3:00 PM to 6:00 PM (15:00 - 18:00), and check-out is by 10:00 AM. If you have custom arrival timing, you can easily arrange it directly with your host via WhatsApp.',
+        },
+        {
+          q: 'Is there free private parking on the estate?',
+          a: 'Yes, the property features spacious, secured private parking inside the gated grounds, free of charge and dedicated exclusively to our guests.',
+        },
+        {
+          q: 'What is the minimum stay requirement?',
+          a: 'The minimum stay is 2 nights to ensure impeccable attention, hygiene, and a complete luxury retreat experience.',
+        },
+        {
+          q: 'Are pets allowed?',
+          a: 'To maintain the highest standards of cleanliness, allergen safety, and peace for all guests, pets are not allowed on the property.',
         },
       ],
     },

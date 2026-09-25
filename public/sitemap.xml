@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://www.nocedipietraluxurytrulli.it/</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.nocedipietraluxurytrulli.it/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.nocedipietraluxurytrulli.it/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.nocedipietraluxurytrulli.it/" />
+    <lastmod>2026-09-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    
+    <!-- Key Images for Google Images indexing -->
+    <image:image>
+      <image:loc>https://www.nocedipietraluxurytrulli.it/images/img_8196.jpg</image:loc>
+      <image:title>Noce di Pietra Luxury Trulli - Vista Panoramica Valle d'Itria</image:title>
+      <image:caption>Autentica dimora in pietra calcarea con coni tradizionali pugliesi immersa negli ulivi tra Martina Franca e Alberobello</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.nocedipietraluxurytrulli.it/images/jacuzzi-relax.jpg</image:loc>
+      <image:title>Vasca Idromassaggio Riscaldata Privata Noce di Pietra</image:title>
+      <image:caption>Relax esclusivo all'aperto nella vasca idromassaggio privata con idroterapia e cromoterapia</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.nocedipietraluxurytrulli.it/images/jacuzzi-experience-1.jpg</image:loc>
+      <image:title>Aperitivo e Idromassaggio tra gli Ulivi</image:title>
+      <image:caption>Esperienza di benessere esclusiva nella campagna pugliese</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.nocedipietraluxurytrulli.it/images/img_8213.jpg</image:loc>
+      <image:title>Suite Padronale sotto la Volta in Pietra Viva</image:title>
+      <image:caption>Camera da letto matrimoniale king-size con archi storici in pietra</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.nocedipietraluxurytrulli.it/images/img_8207.jpg</image:loc>
+      <image:title>Cucina Moderna Attrezzata e Zona Living</image:title>
+      <image:caption>Piano cottura a induzione, forno, lavastoviglie e welcome corner per il massimo comfort</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.nocedipietraluxurytrulli.it/images/img_8201.jpg</image:loc>
+      <image:title>Bagno Privato di Design con Finiture in Pietra</image:title>
+      <image:caption>Ampio box doccia, sanitari sospesi e set di cortesia</image:caption>
+    </image:image>
+  </url>
+</urlset>

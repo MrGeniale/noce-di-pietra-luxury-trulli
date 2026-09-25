@@ -10,6 +10,7 @@ import { AmenitiesSection } from './components/AmenitiesSection';
 import { GallerySection } from './components/GallerySection';
 import { LocationSection } from './components/LocationSection';
 import { ReviewsSection } from './components/ReviewsSection';
+import { FAQSection } from './components/FAQSection';
 import { DirectBookingSection } from './components/DirectBookingSection';
 import { Footer } from './components/Footer';
 import { BookingModal } from './components/BookingModal';
@@ -35,6 +36,7 @@ export function AppContent() {
         <GallerySection />
         <LocationSection />
         <ReviewsSection />
+        <FAQSection />
         <DirectBookingSection onOpenBooking={() => setIsBookingOpen(true)} />
       </main>
 

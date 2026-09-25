@@ -1,0 +1,21 @@
+{
+  "name": "Noce di Pietra – Luxury Trulli",
+  "short_name": "Noce di Pietra",
+  "description": "Dimora di lusso con trulli autentici e vasca idromassaggio privata in Valle d'Itria, Puglia.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#12100e",
+  "theme_color": "#b89360",
+  "icons": [
+    {
+      "src": "/images/logo-gold.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/logo-gold.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

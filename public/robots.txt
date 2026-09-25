@@ -1,0 +1,6 @@
+# Robots.txt for Noce di Pietra - Luxury Trulli
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://www.nocedipietraluxurytrulli.it/sitemap.xml
